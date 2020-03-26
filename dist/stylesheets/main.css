@@ -1,4 +1,3 @@
-
 body {
     background: url('../images/bluevirus.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -6,3 +5,11 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+
+.main-header {
+    color: aliceblue;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
+

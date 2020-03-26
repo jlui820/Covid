@@ -9,19 +9,22 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="./node_modules/axios/dist/axios.min.js"></script>
     <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+    <script src='./dist/bundle.js'></script>
     <script></script>
     <title>Covid-19</title>
 </head>
 
 <body>
+    <h1 class='main-header'>Welcome to Covid-19</h1>
     <script>
         d3.json('https://corona.lmao.ninja/countries')
             .then(res => {
                 console.log(res)
             })
             .catch(error => console.error(error))
+            
     </script>
-
+    <div id='graph'></div>
 </body>
 
 </html>
