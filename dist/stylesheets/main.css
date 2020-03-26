@@ -1,5 +1,8 @@
+
 body {
-    text-align: center;
-    font-size: 24px;
-    color: blue;
+    background: url('../images/bluevirus.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }

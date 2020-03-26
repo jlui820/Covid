@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,30 @@
     <link rel="stylesheet" href="./dist/stylesheets/main.css">
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
     <script></script>
     <title>Covid-19</title>
 </head>
+
 <body>
     <script>
-        axios.get('https://corona.lmao.ninja/v2/historical')
+        d3.json('https://corona.lmao.ninja/countries')
             .then(res => {
-                console.log(res.data)
+                console.log(res)
             })
             .catch(error => console.error(error))
     </script>
+
 </body>
+
 </html>
+
+
+
+
+
+
+
 
 <!-- //script tag to include bundle js usually in header -->
 <!-- d3 tag in here also -->
