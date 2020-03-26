@@ -12,7 +12,11 @@
   "dependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
+    "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
+    "d3": "^5.15.0",
+    "d3-tip": "^0.9.1",
+    "unirest": "^0.6.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.6"
   }
