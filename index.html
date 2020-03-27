@@ -17,7 +17,7 @@
 <body>
     <h1 class='main-header'>Welcome to Covid-19</h1>
     <script>
-        d3.json('https://corona.lmao.ninja/countries')
+        d3.json('https://corona.lmao.ninja/states')
             .then(res => {
                 console.log(res)
             })
@@ -25,6 +25,8 @@
             
     </script>
     <div id='graph'></div>
+    <script src='/src/graph.js'></script>
+
 </body>
 
 </html>

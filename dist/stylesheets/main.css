@@ -4,6 +4,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: aliceblue;
 }
 
 .main-header {
@@ -12,4 +13,5 @@ body {
     display: flex;
     justify-content: center;
 }
+
 
