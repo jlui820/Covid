@@ -1,4 +1,4 @@
-export const graph = () => {
+export const circle = () => {
 
     let margin = {left: 100, right: 50, top: 10, bottom: 130};
 
@@ -9,7 +9,7 @@ export const graph = () => {
 
     let t = d3.transition().duration(1000);
 
-    let g = d3.select("#graph")
+    let g = d3.select("#circle")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -39,7 +39,7 @@ export const graph = () => {
         .attr("font-size", "30px")
         .attr("text-anchor", "middle")
         .attr("fill", "white")
-        .text("States");
+        .text("circle");
 
     // Y Label
     let yLabel = g.append("text")
@@ -51,23 +51,25 @@ export const graph = () => {
         .attr("fill", "white")
         .text("Cases");
 
-        d3.json('https://corona.lmao.ninja/states').then(data => {
-                    data.forEach(d => {
-                        d.cases;
-                        d.state;
-                        d.deaths
-                    })
+    d3.json('https://corona.lmao.ninja/states').then(data => {
+                data.forEach(d => {
+                    d.cases;
+                    d.state;
+                    d.deaths
+                    d.todayCases
+                    d.todayDeaths
+                })
 
 
-            d3.interval(function () {
-                update(data)
-                flag = !flag
-            }, 2000);
-            update(data);
-        });
+        d3.interval(function () {
+            update(data)
+            flag = !flag
+        }, 2000);
+        update(data);
+    });
 
-        function update(data) {
-        let value = flag ? "cases" : "deaths";
+    function update(data) {
+        let value = flag ? "todayCases" : "todayDeaths";
 
         x.domain(data.map(function (d) { return d.state }));
 
@@ -91,33 +93,30 @@ export const graph = () => {
         yAxisGroup.transition(t).call(yAxisCall);
 
         // JOIN new data with old elements.
-        let rects = g.selectAll("rect")
+        let rects = g.selectAll("circle")
             .data(data);
 
         // EXIT old elements not present in new data.
         rects.exit()
             .attr('fill', 'blue')
         .transition(t)
-            .attr('y', y(0))
-            .attr('height', 0)
+            .attr('cy', y(0))
             .remove();
 
+        // ENTER new elements present in new data.
         rects.enter()
-            .append("rect")
+            .append("circle")
                 .attr("fill", "white")
-                .attr('y', y(0))
-                .attr('height', 0)
-                .attr("x", function (d) { return x(d.state)})
-                .attr("width", x.bandwidth)
+                .attr('cy', y(0))
+                .attr("cx", function (d) { return x(d.state) + x.bandwidth() / 2 })
+                .attr("r", 5)
 
                 .merge(rects)
                 .transition(t)
-                    .attr("x", function (d) { return x(d.state)})
-                    .attr("width", x.bandwidth)
-                    .attr("y", function (d) { return y(d[value]); })
-                    .attr("height", function (d) {return height - y(d[value]);})
+                    .attr("cx", function (d) { return x(d.state) + + x.bandwidth() / 2 })
+                    .attr("cy", function (d) { return y(d[value]); })
 
-        let label = flag ? "Cases" : "Deaths";
+        let label = flag ? "Today Cases" : "Today Deaths";
         yLabel.text(label);
 
     }

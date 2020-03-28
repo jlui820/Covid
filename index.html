@@ -16,27 +16,18 @@
 
 <body>
     <h1 class='main-header'>Welcome to Covid-19</h1>
-    <script>
-        d3.json('https://corona.lmao.ninja/states')
-            .then(res => {
-                console.log(res)
-            })
-            .catch(error => console.error(error))
-            
-    </script>
-    <div id='graph'></div>
-    <script src='/src/graph.js'></script>
-
+    <div>
+        <div id='graph'></div>
+        <div id='circle'></div>
+    </div>
+    
 </body>
 
 </html>
 
 
-
-
-
-
-
+<!-- <script src='/src/graph.js'></script> -->
+<!-- <script src='/src/circle.js'></script> -->
 
 <!-- //script tag to include bundle js usually in header -->
 <!-- d3 tag in here also -->
