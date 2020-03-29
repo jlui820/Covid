@@ -34,7 +34,7 @@ export const graph = () => {
 
     // X Label 
     g.append("text")
-        .attr("y", height + 100)
+        .attr("y", height + 120)
         .attr("x", width / 2)
         .attr("font-size", "30px")
         .attr("text-anchor", "middle")
@@ -50,6 +50,7 @@ export const graph = () => {
         .attr("transform", "rotate(-90)")
         .attr("fill", "white")
         .text("Cases");
+        
 
         d3.json('https://corona.lmao.ninja/states').then(data => {
                     data.forEach(d => {
@@ -82,6 +83,7 @@ export const graph = () => {
             .selectAll("text")
             .attr("y", "10")
             .attr("x", "-5")
+            .attr("font-size", "13px")
             .attr("text-anchor", "end")
             .attr("transform", "rotate(-40)");
 

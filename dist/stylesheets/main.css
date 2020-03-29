@@ -14,4 +14,12 @@ body {
     justify-content: center;
 }
 
+.today-button {
+    text-decoration: none;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-end;
+    color: aliceblue;
+}
 

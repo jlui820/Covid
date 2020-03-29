@@ -12,13 +12,25 @@
     <script src='./dist/bundle.js'></script>
     <script></script>
     <title>Covid-19</title>
+    
 </head>
 
 <body>
     <h1 class='main-header'>Welcome to Covid-19</h1>
+    <a class='today-button' href="#circle">Daily Details</a>
     <div>
         <div id='graph'></div>
+        <section id="circle"></section>
         <div id='circle'></div>
+        <script>
+            d3.json('https://corona.lmao.ninja/states')
+                .then(res => {
+                    console.log(res)
+                })
+                .catch(error => console.error(error))
+
+        </script>
+
     </div>
     
 </body>

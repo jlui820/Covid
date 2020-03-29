@@ -1,3 +1,4 @@
+
 export const circle = () => {
 
     let margin = {left: 100, right: 50, top: 10, bottom: 130};
@@ -34,12 +35,12 @@ export const circle = () => {
 
     // X Label 
     g.append("text")
-        .attr("y", height + 100)
+        .attr("y", height + 120)
         .attr("x", width / 2)
         .attr("font-size", "30px")
         .attr("text-anchor", "middle")
         .attr("fill", "white")
-        .text("circle");
+        .text("States");
 
     // Y Label
     let yLabel = g.append("text")
@@ -84,6 +85,7 @@ export const circle = () => {
             .selectAll("text")
             .attr("y", "10")
             .attr("x", "-5")
+            .attr("font-size", "13px")
             .attr("text-anchor", "end")
             .attr("transform", "rotate(-40)");
 
