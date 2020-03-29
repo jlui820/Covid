@@ -113,7 +113,7 @@ export const circle = () => {
                 .attr("fill", "white")
                 .attr('cy', y(0))
                 .attr("cx", (d) => { return x(d.state) + x.bandwidth() / 2 })
-                .attr("r", 5)
+                .attr("r", 7)
 
                 .merge(rects)
                 .transition(t)
