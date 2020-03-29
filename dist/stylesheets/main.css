@@ -24,12 +24,13 @@ body {
     font-size: 1.1rem;
     border: 1px solid aliceblue;
     border-radius: 5px;
-    background: #558bc7;
+    background: #8076a3;
+    opacity: .75;
 }
 
 .today-button:hover {
-    opacity: .5;
-    background-color: gold;
+    background-color: #f9c5bd;
+    transition: background-color .5s;
 }
 
 .contact{
@@ -82,13 +83,15 @@ a {
     width: 100%;
     font-size: 1.1rem;
     border-color: rgb(165, 165, 165);
-    background-color: #558bc7;
+    background-color: #8076a3;
     padding: .5px;
     border-radius: 4px;
 
 }
 
 #top-button:hover {
-    background-color: #7dbbf1;
+   background-color: #f9c5bd;
+   transition: background-color .5s;
+   opacity: .75;
 }
 
