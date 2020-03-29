@@ -28,3 +28,23 @@ body {
 .today-button:hover {
     opacity: .5;
 }
+
+.contact{
+    font-size: 70px;
+    padding-left: 3rem;
+}
+
+.fab:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    text-shadow: 1px 1px 10px white, 0 0 15px white, 0 0 20px white;
+}
+
+.fab {
+    color: white;
+    font-size: 3rem;
+}
+
+a {
+    text-decoration: none;
+}

@@ -59,26 +59,26 @@ export const graph = () => {
                         d.deaths
                     })
 
-            d3.interval(function () {
+            d3.interval(() => {
                 update(data)
                 flag = !flag
             }, 2000);
             update(data);
         });
 
-        function update(data) {
+        let update = (data) => {
         let value = flag ? "cases" : "deaths";
 
-        x.domain(data.map(function (d) { return d.state }));
+        x.domain(data.map( (d) => { return d.state }));
 
-        y.domain([0, d3.max(data, function (d) { return d[value]})])
+        y.domain([0, d3.max(data,  (d) => { return d[value]})])
 
         // X Axis
         let xAxisCall = d3.axisBottom(x);
         g.append("g")
             .attr("class", "x axis")
             .attr("transform", "translate(0, " + height + ")")
-            .transition(t).call(xAxisCall)
+            .call(xAxisCall)
             .selectAll("text")
             .attr("y", "10")
             .attr("x", "-5")
@@ -86,9 +86,11 @@ export const graph = () => {
             .attr("text-anchor", "end")
             .attr("transform", "rotate(-40)");
 
+            
+
         // Y Axis
         let yAxisCall = d3.axisLeft(y)
-            .tickFormat(function (d) {return d;});
+            .tickFormat( (d) => {return d;});
         yAxisGroup.transition(t).call(yAxisCall);
 
         // JOIN new data with old elements.
@@ -108,15 +110,15 @@ export const graph = () => {
                 .attr("fill", "white")
                 .attr('y', y(0))
                 .attr('height', 0)
-                .attr("x", function (d) { return x(d.state)})
+                .attr("x", (d) => { return x(d.state)})
                 .attr("width", x.bandwidth)
 
                 .merge(rects)
                 .transition(t)
-                    .attr("x", function (d) { return x(d.state)})
+                    .attr("x", (d) => { return x(d.state)})
                     .attr("width", x.bandwidth)
-                    .attr("y", function (d) { return y(d[value]); })
-                    .attr("height", function (d) {return height - y(d[value]);})
+                    .attr("y", (d) => { return y(d[value]); })
+                    .attr("height",  (d) => {return height - y(d[value]);})
 
         let label = flag ? "Cases" : "Deaths";
         yLabel.text(label);
