@@ -59,7 +59,6 @@ export const graph = () => {
                         d.deaths
                     })
 
-
             d3.interval(function () {
                 update(data)
                 flag = !flag
