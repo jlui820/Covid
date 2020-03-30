@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/stylesheets/reset.css">
     <link rel="stylesheet" href="./dist/stylesheets/main.css">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="./node_modules/axios/dist/axios.min.js"></script>
     <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
@@ -14,17 +17,19 @@
     <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
     <link rel="icon" href="./dist/images/coronavirus_PNG6.png" type="image/png">
     <title>Covid-19</title>
+  
 </head>
 
 <body>
-    <h1 class='main-header'>Welcome to Covid-19</h1>
+    <div class='nav-bar'>
+        <img class='nav-picture' src="./dist/images/pink.png" alt="">
+        <h1 class='main-header'>Welcome to Covid-19</h1>
+    </div>
     <a class='today-button' href="#circle">Daily Details</a>
-    
     <div>
         <div id='graph'></div>
         <section id="circle"></section>
         <div id='circle'></div>
-        <div id='bubbles'></div>
     </div>
     <button id="top-button"><a href="#top" style="color: white">Top</a></button>
     <div class="contact">

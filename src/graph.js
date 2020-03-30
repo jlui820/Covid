@@ -23,16 +23,14 @@ export const graph = () => {
     let yAxisGroup = g.append("g")
         .attr("class", "y axis");
 
-    // X Scale
     let x = d3.scaleBand()
         .range([0, width])
         .padding(0.4);
 
-    // Y Scale
+
     let y = d3.scaleLinear()
         .range([height, 0]);
 
-    // X Label 
     g.append("text")
         .attr("y", height + 120)
         .attr("x", width / 2)
@@ -41,7 +39,6 @@ export const graph = () => {
         .attr("fill", "white")
         .text("States");
 
-    // Y Label
     let yLabel = g.append("text")
         .attr("y", -60)
         .attr("x", -(height / 2))
@@ -73,7 +70,7 @@ export const graph = () => {
 
         y.domain([0, d3.max(data,  (d) => { return d[value]})])
 
-        // X Axis
+
         let xAxisCall = d3.axisBottom(x);
         g.append("g")
             .attr("class", "x axis")
@@ -87,17 +84,15 @@ export const graph = () => {
             .attr("transform", "rotate(-40)");
 
             
-
-        // Y Axis
         let yAxisCall = d3.axisLeft(y)
             .tickFormat( (d) => {return d;});
         yAxisGroup.transition(t).call(yAxisCall);
 
-        // JOIN new data with old elements.
+
         let rects = g.selectAll("rect")
             .data(data);
 
-        // EXIT old elements not present in new data.
+   
         rects.exit()
             .attr('fill', 'blue')
         .transition(t)
