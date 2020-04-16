@@ -46,9 +46,9 @@ export const circle = () => {
         .attr("text-anchor", "middle")
         .attr("transform", "rotate(-90)")
         .attr("fill", "white")
-        .text("Cases");
-
-    d3.json('https://corona.lmao.ninja/states').then(data => {
+        .text("Cases"); 
+            
+    d3.json('https://corona.lmao.ninja/v2/states/').then(data => {
                 data.forEach(d => {
                     d.cases;
                     d.state;
