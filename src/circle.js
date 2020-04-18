@@ -49,6 +49,7 @@ export const circle = () => {
         .text("Cases"); 
             
     d3.json('https://corona.lmao.ninja/v2/states/').then(data => {
+        
                 data.forEach(d => {
                     d.cases;
                     d.state;
