@@ -91,7 +91,7 @@ a {
 }
 
 #top-button:hover {
-   background-color: gold;
+   background-color: #8076a3;
    /* background-color: #f9c5bd; */
    transition: background-color .5s;
    opacity: .75;
