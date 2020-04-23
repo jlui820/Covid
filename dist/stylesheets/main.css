@@ -1,11 +1,12 @@
 body {
-    background: url('../images/virus-4930250_1920.jpg') no-repeat center center fixed;
+    /* background: url('../images/virus-4930250_1920.jpg') no-repeat center center fixed; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: aliceblue;
     font-family: 'Sen', sans-serif;
+    background-color: grey;
 }
 
 .main-header {
@@ -91,8 +92,8 @@ a {
 }
 
 #top-button:hover {
-   background-color: #8076a3;
-   /* background-color: #f9c5bd; */
+   /* background-color: #8076a3; */
+   background-color: #f9c5bd;
    transition: background-color .5s;
    opacity: .75;
 }
@@ -107,3 +108,11 @@ a {
     height: 4rem;
     width: 4rem;
 }
+
+
+
+
+
+
+
+
