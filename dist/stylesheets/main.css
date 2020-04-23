@@ -1,12 +1,12 @@
 body {
-    /* background: url('../images/virus-4930250_1920.jpg') no-repeat center center fixed; */
+    background: url('../images/virus-4930250_1920.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: aliceblue;
     font-family: 'Sen', sans-serif;
-    background-color: grey;
+    /* background-color: grey; */
 }
 
 .main-header {
