@@ -9,6 +9,7 @@
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+
     <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
     <!-- <script src="./node_modules/axios/dist/axios.min.js"></script> -->
     <script src='./dist/bundle.js'></script>
@@ -30,7 +31,7 @@
     <div>
         <div id='graph'></div>
         <div id='circle'></div>
-        <div id='bubble'></div>
+        <!-- <div id='bubble'></div> -->
     </div>
         
     <button id="top-button"><a href="#top" style="color: white">Top</a></button>
@@ -149,48 +150,47 @@
 
 
 
-     var legend = svg.selectAll(".legend")
-         .data(data).enter()
-         .append("g")
-         .attr("class", "legend")
-         .attr("transform", "translate(" + 1400 + "," + 120 + ")");
+    //  var legend = svg.selectAll(".legend")
+    //      .data(data).enter()
+    //      .append("g")
+    //      .attr("class", "legend")
+    //      .attr("transform", "translate(" + 1400 + "," + 120 + ")");
 
 
-     legend.append("rect")
-         .attr("x", 5)
-         .attr("y", function (d, i) {
-             return 20 * i;
-         })
-         .attr("width", 15)
-         .attr("height", 15)
-         .style("fill", function (d) {
-             return color(d.i)
-         });
+    //  legend.append("rect")
+    //      .attr("x", 5)
+    //      .attr("y", function (d, i) {
+    //          return 20 * i;
+    //      })
+    //      .attr("width", 15)
+    //      .attr("height", 15)
+    //      .style("fill", function (d) {
+    //          return color(d.i)
+    //      });
 
 
-     legend.append("text")
-         .attr("x", 25)
-         .attr("text-anchor", "start")
-         .attr("dy", "1em")
-         .attr("y", function (d, i) {
-             return 20 * i;
-         })
-         .text(function (d) {
-             return d.Call_Type;
-         })
-         .attr("font-size", "12px");
+    //  legend.append("text")
+    //      .attr("x", 25)
+    //      .attr("text-anchor", "start")
+    //      .attr("dy", "1em")
+    //      .attr("y", function (d, i) {
+    //          return 20 * i;
+    //      })
+    //      .text(function (d) {
+    //          return d.Call_Type;
+    //      })
+    //      .attr("font-size", "12px");
 
 
-     legend.append("text")
-         .attr("x", 31)
-         .attr("dy", "-.2em")
-         .attr("y", -10)
-         .text("State")
-         .attr("font-size", "17px");
+    //  legend.append("text")
+    //      .attr("x", 31)
+    //      .attr("dy", "-.2em")
+    //      .attr("y", -10)
+    //      .text("State")
+    //      .attr("font-size", "17px");
 
  });
-          </script>
-
+        </script>
     </div>
      <div class="contact">
          <a href="https://github.com/jlui820/Covid-19">

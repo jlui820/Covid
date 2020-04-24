@@ -1,8 +1,12 @@
 export const bubble = () => {
 
-{/* <svg width="1600" height="1800" font-family="sans-serif" font-size="10" text-anchor="middle"></svg>
+{/* <svg width="1600" height="1800" font-family="sans-serif" font-size="10" text-anchor="middle"></svg> */}
+    let margin = {left: 100, right: 50, top: 10, bottom: 130};
 
- var svg = d3.select("svg"),
+    let width = 1600 - margin.left - margin.right,
+        height = 800 - margin.top - margin.bottom;
+
+ var bubble = d3.select("#bubble"),
      width = +svg.attr("width"),
      height = +svg.attr("height");
 
@@ -151,6 +155,6 @@ export const bubble = () => {
          .text("State")
          .attr("font-size", "17px");
 
- }); */}
+ });
 }
 
