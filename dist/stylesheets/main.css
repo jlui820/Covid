@@ -109,6 +109,16 @@ a {
     width: 4rem;
 }
 
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+}
+
 
 
 
@@ -135,3 +145,6 @@ div.tooltip {
 .bubblecss {
     width: 100%;
 }
+
+
+
