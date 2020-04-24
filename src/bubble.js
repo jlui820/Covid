@@ -1,44 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+export const bubble = () => {
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/stylesheets/reset.css">
-    <link rel="stylesheet" href="./dist/stylesheets/main.css">
+{/* <svg width="1600" height="1800" font-family="sans-serif" font-size="10" text-anchor="middle"></svg>
 
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
-    <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
-    <!-- <script src="./node_modules/axios/dist/axios.min.js"></script> -->
-    <script src='./dist/bundle.js'></script>
-    <script src="https://kit.fontawesome.com/07e3f56f33.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
-    <link rel="icon" href="./dist/images/coronavirus_PNG6.png" type="image/png">
-    <title>Covid-19</title>
-    
-    
-    
-</head>
-
-<body>
-    <div class='nav-bar'>
-        <img class='nav-picture' src="./dist/images/pink.png" alt="">
-        <h1 class='main-header'>Welcome to Covid-19</h1>
-    </div>
-    <a class='today-button' href="#circle">Daily Details</a>
-    <div>
-        <div id='graph'></div>
-        <div id='circle'></div>
-        <div id='bubble'></div>
-    </div>
-        
-    <button id="top-button"><a href="#top" style="color: white">Top</a></button>
-
-<div>
-    <svg class='bubblecss' width="1600" height="1000" font-family="sans-serif" font-size="10" text-anchor="middle"></svg>
-    <script>
-             
  var svg = d3.select("svg"),
      width = +svg.attr("width"),
      height = +svg.attr("height");
@@ -188,22 +151,6 @@
          .text("State")
          .attr("font-size", "17px");
 
- });
-          </script>
+ }); */}
+}
 
-    </div>
-     <div class="contact">
-         <a href="https://github.com/jlui820/Covid-19">
-             <i id="github-icon" class="fab fa-github"></i>
-         </a>
-         <a href="https://angel.co/jeffrey-lui-820">
-             <i id="angel-icon" class="fab fa-angellist"></i>
-         </a>
-         <a href="https://www.linkedin.com/in/jeffrey-lui820/">
-             <i id="linkedin-icon" class="fab fa-linkedin-in"></i>
-         </a>
-     </div>
-    
-</body>
-
-</html>
