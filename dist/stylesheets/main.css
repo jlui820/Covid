@@ -109,7 +109,10 @@ a {
     width: 4rem;
 }
 
-
+/* html, body {
+    height: 100%;
+    overflow: hidden;
+} */
 
 
 
@@ -118,7 +121,7 @@ a {
 
 svg {
     font-size: .870rem;
-
+    
 }
 
 div.tooltip {
@@ -127,6 +130,7 @@ div.tooltip {
     width: 60px;
     height: 45px;
     padding: 2px;
+    border-radius: 10px;
     font: 12px sans-serif;
     background: lightsteelblue;
     border: 0px;
