@@ -47,8 +47,10 @@ export const circle = () => {
         .attr("transform", "rotate(-90)")
         .attr("fill", "white")
         .text("Cases"); 
-            
-    d3.json('https://corona.lmao.ninja/v2/states/').then(data => {
+       
+    const endpoint =         
+
+    d3.json('https://disease.sh/v2/states').then(data => {
         
                 data.forEach(d => {
                     d.cases;
