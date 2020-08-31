@@ -7,7 +7,7 @@ export const graph = () => {
 
     let flag = true;
 
-    let t = d3.transition().duration(1000);
+    let t = d3.transition().duration(4000);
 
     let g = d3.select("#graph")
         .append("svg")
@@ -59,7 +59,7 @@ export const graph = () => {
             d3.interval(() => {
                 update(data)
                 flag = !flag
-            }, 2000);
+            }, 4000);
             update(data);
         });
 
